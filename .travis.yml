@@ -31,5 +31,7 @@ deploy:
   api_key:
     secure: oVoCEvAyLgX03SevUBibhfWAXZVpIaMcyP0aCGc9RV+Jxz2bn+1LPTughuHMnkc33NsXiAL/7uNLL9U6tFbiF7SvuMze48wGRe9WHVltQSFEko/ZTlBTTBP/MQi/wtdLktvLY22fulKHkQYOfByNha5S1TutW4Eiiyc4XOX9u03K+Y241XLHz8jZ/1ZF4qjWPGoO09ve9ND+zCLeDUIxVjo10ojjAw6wrjhdwqy9MZklTcQ/S1ukYI4fIQVgBJrXoBsbJ1hCroZITe5Y3hEcK0ldPuweiMcVUBrzC2ruyml3AiVIJdu/NTLbehCrYCDzZiJX3BnwSh9h+IE2OprEnggcNYN3xWeZjHnswnVGHQLG2y5Hu3jfGJDgU8qtXAf34sxfBL6g9w6HQoMxdMJ/+CLtD0sgBxidpVl/gqDs2bXJ3h9Kr7Y3zpd/pRgYfcn4t34wrx0Deg1hfs6R+avREeJZYTshW+12UhGHnGSPKUt8Twcu2GPqqpRSGB8XVdFoVDJ89ND1KmfQR3jBmldPbGJ1AvGXOqstuPc2Jbjb8Z14vXiljA2n/EqBNdzSVUY18O0r5OXZs7TBcg01FWRu9Cbe40WtXlgM4i+L+W9AlVCzfowYV6Ctm2a4XJJM1K456TTWJagN23VFfdDNj+3w4ptD6nU6FqeSfg+HLxmZkf0=
   file: "$FRAMEWORK_NAME.framework.zip"
+  skip_cleanup: true
   on:
     repo: pogramos/GRSTextField
+    tags: true
