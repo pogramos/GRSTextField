@@ -30,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E61D47CC21496BDB006386CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6EBE9D82138915200A40C2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6EBEA012138929000A40C2C;
+			remoteInfo = SampleApp;
+		};
 		E6EBE9EC2138915200A40C2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E6EBE9D82138915200A40C2C /* Project object */;
@@ -268,6 +275,7 @@
 			);
 			dependencies = (
 				E6EBE9ED2138915200A40C2C /* PBXTargetDependency */,
+				E61D47CD21496BDB006386CF /* PBXTargetDependency */,
 			);
 			name = GRSTextFieldTests;
 			productName = GRSTextFieldTests;
@@ -327,6 +335,7 @@
 					E6EBE9E92138915200A40C2C = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						TestTargetID = E6EBEA012138929000A40C2C;
 					};
 					E6EBEA012138929000A40C2C = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -453,6 +462,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E61D47CD21496BDB006386CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6EBEA012138929000A40C2C /* SampleApp */;
+			targetProxy = E61D47CC21496BDB006386CF /* PBXContainerItemProxy */;
+		};
 		E6EBE9ED2138915200A40C2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E6EBE9E02138915200A40C2C /* GRSTextField */;
@@ -693,6 +707,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
 			};
 			name = Debug;
 		};
@@ -714,6 +729,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "GRSTextFieldTests/GRSTextFieldTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
 			};
 			name = Release;
 		};
