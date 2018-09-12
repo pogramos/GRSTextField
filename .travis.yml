@@ -1,39 +1,35 @@
 language: objective-c
 osx_image: xcode9.4
-
-# Xcode projects
 xcode_sdk: iphonesimulator11.1
 xcode_project: GRSTextField.xcodeproj
 xcode_scheme: GRSTextFieldTests
 xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
-
-# Environment
 branches:
   only:
-    - master
-
+  - master
 env:
   global:
-    - FRAMEWORK_NAME="GRSTextField"
-
+  - FRAMEWORK_NAME="GRSTextField"
 before_install:
-  - brew update
-  - brew outdated carthage || brew upgrade carthage
-
-before_script:
-  #- carthage bootstrap
-
+- brew update
+- brew outdated carthage || brew upgrade carthage
 before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive $FRAMEWORK_NAME
-
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
 notifications:
   slack:
     rooms:
-      - secure: "ez3HBlOFXy6luAT0DYrTIwufAK03IYOLTpQag0qlk5awNoQsH+3SEoo1A6stiAtbeXhgZANKlUkAks4+WnPRoMCY0HGbKzW3Fa9jK7ZdkL42Secj2ufU8z3EN1PgQRdr3OdYplFE6fkbWDn/bORNbTJCYCvANwTSAeWpO/9ECE6w0ocaie+5qxD1FEUni3K3NS9ERElddUpyYEB5JQNeCChlDi62d1izZASGuUi1rmYo9ri6I7bgjTUZz6voM1b4znMVAeAmgME0pDoF3NClQhzbAPfXUWRuJ2MuqSK0MGD6rh64T+fmhX64RJMlGqs5zr1vPfvKf2eoJJySUXoSBsxUIUQbcCCAM7tlcMdwoxFi3D9FibU4yeLWuEi7C2xtI+kLFwgul0AA0y5lPxoi0oXM+fqGvYUks8nlRVUQMTb1h76843TMk3rivu198rUPJXIRYuASJgVtBup/0gJqC1ymlDh9qXPNp8nfYKdRHM5m5IBLyeVmxPE2BfnyblTs8wrTs4kAx3MS3MborSzi5yIWm8x6BX6aO2tFnoB2qLXFY9ODxajyrUz1QGNMtXNc0ainYSWaHiQa9T3rhIPeRR2VP5Efq3yUFI9Bl85127ox/u0obboxRDRgYLq+PMJ7xw6YZu23m3w9cNHJmP4D3xkgzXd/eodlRCyd6HYsb34="
+    - secure: ez3HBlOFXy6luAT0DYrTIwufAK03IYOLTpQag0qlk5awNoQsH+3SEoo1A6stiAtbeXhgZANKlUkAks4+WnPRoMCY0HGbKzW3Fa9jK7ZdkL42Secj2ufU8z3EN1PgQRdr3OdYplFE6fkbWDn/bORNbTJCYCvANwTSAeWpO/9ECE6w0ocaie+5qxD1FEUni3K3NS9ERElddUpyYEB5JQNeCChlDi62d1izZASGuUi1rmYo9ri6I7bgjTUZz6voM1b4znMVAeAmgME0pDoF3NClQhzbAPfXUWRuJ2MuqSK0MGD6rh64T+fmhX64RJMlGqs5zr1vPfvKf2eoJJySUXoSBsxUIUQbcCCAM7tlcMdwoxFi3D9FibU4yeLWuEi7C2xtI+kLFwgul0AA0y5lPxoi0oXM+fqGvYUks8nlRVUQMTb1h76843TMk3rivu198rUPJXIRYuASJgVtBup/0gJqC1ymlDh9qXPNp8nfYKdRHM5m5IBLyeVmxPE2BfnyblTs8wrTs4kAx3MS3MborSzi5yIWm8x6BX6aO2tFnoB2qLXFY9ODxajyrUz1QGNMtXNc0ainYSWaHiQa9T3rhIPeRR2VP5Efq3yUFI9Bl85127ox/u0obboxRDRgYLq+PMJ7xw6YZu23m3w9cNHJmP4D3xkgzXd/eodlRCyd6HYsb34=
     on_success: always
     template:
-      - "%{repository}"
-      - 'Commit: %{commit}'
-      - 'Message: %{message}'
-      - 'Build details: %{build_url}'
+    - "%{repository}"
+    - 'Commit: %{commit}'
+    - 'Message: %{message}'
+    - 'Build details: %{build_url}'
+deploy:
+  provider: releases
+  api_key:
+    secure: oVoCEvAyLgX03SevUBibhfWAXZVpIaMcyP0aCGc9RV+Jxz2bn+1LPTughuHMnkc33NsXiAL/7uNLL9U6tFbiF7SvuMze48wGRe9WHVltQSFEko/ZTlBTTBP/MQi/wtdLktvLY22fulKHkQYOfByNha5S1TutW4Eiiyc4XOX9u03K+Y241XLHz8jZ/1ZF4qjWPGoO09ve9ND+zCLeDUIxVjo10ojjAw6wrjhdwqy9MZklTcQ/S1ukYI4fIQVgBJrXoBsbJ1hCroZITe5Y3hEcK0ldPuweiMcVUBrzC2ruyml3AiVIJdu/NTLbehCrYCDzZiJX3BnwSh9h+IE2OprEnggcNYN3xWeZjHnswnVGHQLG2y5Hu3jfGJDgU8qtXAf34sxfBL6g9w6HQoMxdMJ/+CLtD0sgBxidpVl/gqDs2bXJ3h9Kr7Y3zpd/pRgYfcn4t34wrx0Deg1hfs6R+avREeJZYTshW+12UhGHnGSPKUt8Twcu2GPqqpRSGB8XVdFoVDJ89ND1KmfQR3jBmldPbGJ1AvGXOqstuPc2Jbjb8Z14vXiljA2n/EqBNdzSVUY18O0r5OXZs7TBcg01FWRu9Cbe40WtXlgM4i+L+W9AlVCzfowYV6Ctm2a4XJJM1K456TTWJagN23VFfdDNj+3w4ptD6nU6FqeSfg+HLxmZkf0=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  on:
+    repo: pogramos/GRSTextField
