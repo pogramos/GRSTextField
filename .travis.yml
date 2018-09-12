@@ -1,9 +1,9 @@
 language: objective-c
 osx_image: xcode9.4
-xcode_sdk: iphonesimulator11.1
+xcode_sdk: iphonesimulator11.4
 xcode_project: GRSTextField.xcodeproj
 xcode_scheme: GRSTextFieldTests
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
 branches:
   only:
   - master
