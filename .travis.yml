@@ -7,6 +7,10 @@ xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
 env:
   global:
   - FRAMEWORK_NAME="GRSTextField"
+branches:
+  only:
+    - master
+    - /\d+[\.\da-zA-Z]+[^\.]/
 cache:
   directories:
   - Carthage
