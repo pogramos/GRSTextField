@@ -16,8 +16,9 @@ before_install:
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive $FRAMEWORK_NAME
+- pod spec lint --allow-warnings
 after_deploy:
-- pod trunk push ${FRAMEWORK_NAME}
+- pod trunk push --allow-warnings
 notifications:
   slack:
     rooms:
@@ -38,9 +39,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: pogramos/GRSTextField
-    tags: true
-  # Cocoa pods
-  provider: script
-  script: ./scripts/push.sh
-  on:
     tags: true
