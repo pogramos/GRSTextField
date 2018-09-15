@@ -4,10 +4,6 @@ xcode_sdk: iphonesimulator11.4
 xcode_project: GRSTextField.xcodeproj
 xcode_scheme: GRSTextFieldTests
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
-branches:
-  only:
-    - master
-    - /v\d+[\.\da-zA-Z]+[^\.]/
 env:
   global:
   - FRAMEWORK_NAME="GRSTextField"
@@ -40,4 +36,3 @@ deploy:
   on:
     repo: pogramos/GRSTextField
     tags: true
-    all_branches: true
