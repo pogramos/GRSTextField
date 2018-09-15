@@ -88,3 +88,6 @@ By default this color is <span style="color:blue">blue</span>. This will be appl
 Language: Swift 4
 
 If you need/want to use an older version of this field there's an Objective-C version of it on [GRTextField](http://github.com/pogramos/GRTextField)
+
+## License
+GRSTextField is available under the MIT license. See the LICENSE file for more info.

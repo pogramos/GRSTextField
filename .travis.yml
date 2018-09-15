@@ -6,10 +6,14 @@ xcode_scheme: GRSTextFieldTests
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
 branches:
   only:
-  - master
+    - master
+    - /v\d+[\.\da-zA-Z]+[^\.]/
 env:
   global:
   - FRAMEWORK_NAME="GRSTextField"
+cache:
+  directories:
+  - Carthage
 before_install:
 - brew update
 - brew outdated carthage || brew upgrade carthage
@@ -19,8 +23,9 @@ before_deploy:
 notifications:
   slack:
     rooms:
-    - secure: ez3HBlOFXy6luAT0DYrTIwufAK03IYOLTpQag0qlk5awNoQsH+3SEoo1A6stiAtbeXhgZANKlUkAks4+WnPRoMCY0HGbKzW3Fa9jK7ZdkL42Secj2ufU8z3EN1PgQRdr3OdYplFE6fkbWDn/bORNbTJCYCvANwTSAeWpO/9ECE6w0ocaie+5qxD1FEUni3K3NS9ERElddUpyYEB5JQNeCChlDi62d1izZASGuUi1rmYo9ri6I7bgjTUZz6voM1b4znMVAeAmgME0pDoF3NClQhzbAPfXUWRuJ2MuqSK0MGD6rh64T+fmhX64RJMlGqs5zr1vPfvKf2eoJJySUXoSBsxUIUQbcCCAM7tlcMdwoxFi3D9FibU4yeLWuEi7C2xtI+kLFwgul0AA0y5lPxoi0oXM+fqGvYUks8nlRVUQMTb1h76843TMk3rivu198rUPJXIRYuASJgVtBup/0gJqC1ymlDh9qXPNp8nfYKdRHM5m5IBLyeVmxPE2BfnyblTs8wrTs4kAx3MS3MborSzi5yIWm8x6BX6aO2tFnoB2qLXFY9ODxajyrUz1QGNMtXNc0ainYSWaHiQa9T3rhIPeRR2VP5Efq3yUFI9Bl85127ox/u0obboxRDRgYLq+PMJ7xw6YZu23m3w9cNHJmP4D3xkgzXd/eodlRCyd6HYsb34=
+      secure: ogl6P6WefOumYRAg2BTZThB9NDoRZCbalMQmdFCEiTUiXu99utAf4oBhhdLU3j59pxkR06ZRZgGYfKGux/s0QxHRFpSeEXWlPtZUhIPhQLq3SPwt6AqoXxN0yTpf36Gnh+jMyMKnU6XV6zbPGLF7MTKxpDhqb9byD1QhbO8H3zPH5SH8/33aHjGfC48gJW/BLwuPVoXu79q5MrhVmuYasJWurojpDRevd2SCRbExiqK+MkJZku+MP7jmRPjxWkxA8IL8KmD65HRq8aOlBhBgIRsUKqnDYLUjyPE1IZOF3GBkGWnjuNqiPvVPggp9pAMRkLFtlJagahlp88UKHjZv86cyprEAmU1Jh4gqS1ZQCjN2wQ3I1EhoE/pawsv94ZGke3gHIZG6fHa/nrnSMw/RGiTky0dyQcWKuVrILP0R3ke/CB5hM8Y0S+75zodfQlOCuAZ1AOe61+gMDBy+USzBwiTTPQHsDG2mxgq/12Z0rkYxrCUdP2sfDaYdMzj0qB5vOgUngS3k74dmucXR41A2kgEigymFE+CIrdGXnPJ2ZW3r4jm+8f6kLTnaLXiweKrsyRT/IDK1hPasruVWTxNdUQCDpZt347OyJ2dtnoGMxMvOU+aMrGebS/0GhuQW13GxuzOn6z+fH1JorZS6F3V05p2I60cq4qAlDMk8pG8NP5g=
     on_success: always
+    on_pull_requests: false
     template:
     - "%{repository}"
     - 'Commit: %{commit}'
@@ -35,3 +40,4 @@ deploy:
   on:
     repo: pogramos/GRSTextField
     tags: true
+    all_branches: true
