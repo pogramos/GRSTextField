@@ -101,13 +101,18 @@ public class GRSTextField: UITextField {
         initialization()
     }
 
+    deinit {
+        removeTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+
     // MARK: - Private functions
 
     private func initialization() {
         super.delegate = self
+        addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         setupErrorLabel()
-        if maskPattern.isEmpty {
-            keyboardType = .numberPad
+        if !maskPattern.isEmpty {
+          keyboardType = .numberPad
         }
         layoutSubviews()
     }
@@ -149,7 +154,7 @@ public class GRSTextField: UITextField {
             height = 1
         } else {
             color = errorBorderColor
-            height = 2
+            height = 3
         }
         errorLabel?.textColor = color
         border?.backgroundColor = color?.cgColor
@@ -159,6 +164,14 @@ public class GRSTextField: UITextField {
     private func updateField(frame: CGRect) {
         self.frame = frame
         initialization()
+    }
+
+    @objc
+    private func textFieldDidChange(_ textField: UITextField) {
+        guard let text = textField.text else {
+            return
+        }
+        textField.text = change(text: text)
     }
 
     // MARK: - Public functions
@@ -176,9 +189,10 @@ public class GRSTextField: UITextField {
 
     @objc
     public func applyMask() {
-        if !maskPattern.isEmpty {
-            text = text?.mask(pattern: maskPattern)
+        guard let text = text else {
+            return
         }
+        self.text = change(text: text)
     }
 
     @objc(setError:)

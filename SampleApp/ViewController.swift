@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        configGestures()
     }
 
     fileprivate func setupErrorLabel(_ defaultRect: CGRect) {
@@ -30,8 +31,14 @@ class ViewController: UIViewController {
         textField.maskPattern = "####-###"
         textField.hasBorders = true
         textField.errorMessage = "Required field"
+        textField.textInsets = CGPoint(x: 12, y: 12)
 
         textField.errorLabel = errorLabel
+    }
+
+    func configGestures() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
+        view.addGestureRecognizer(gesture)
     }
 
     func configUI() {
@@ -48,12 +55,16 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(errorLabel)
         view.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-
         stackView.sizeToFit()
 
         textField.delegate = self
+    }
+
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
 }
 

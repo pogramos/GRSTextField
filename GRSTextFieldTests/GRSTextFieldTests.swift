@@ -10,40 +10,46 @@ import XCTest
 @testable import GRSTextField
 
 class GRSTextFieldTests: XCTestCase {
-    var textField: GRSTextField!
-
     override func setUp() {
-        textField = GRSTextField()
         super.setUp()
     }
 
-    private func mask() {
+    func testMask() {
+        let textField = GRSTextField()
         textField.maskPattern = "####-###"
         textField.text = "1111222"
         textField.applyMask()
-    }
-
-    func testMask() {
-        mask()
         let expected = "1111-222"
-
         XCTAssertEqual(textField.text, expected)
     }
 
     func testUnmask() {
-        mask()
+        let textField = GRSTextField()
+        textField.maskPattern = "####-###"
+        textField.text = "1111222"
+        textField.applyMask()
         let expected = "1111222"
-
         XCTAssertEqual(textField.unmasked, expected)
     }
 
     func testKeyboardType() {
+        let textField = GRSTextField()
         textField.maskPattern = "#"
         let expected: UIKeyboardType = .numberPad
         XCTAssertEqual(textField.keyboardType, expected)
     }
 
+    func testValidate() {
+        let textField = GRSTextField()
+        textField.maxCharacters = 2
+        textField.text = "1234567"
+        textField.sendActions(for: .editingChanged)
+        let expected = "12"
+        XCTAssertEqual(textField.text, expected)
+    }
+
     func testColors() {
+        let textField = GRSTextField()
         let borderColorExpected: UIColor = .lightGray
         let selectedColorExpected: UIColor = .blue
         let errorBorderColorExpected: UIColor = .red

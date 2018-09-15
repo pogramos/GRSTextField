@@ -18,25 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tesadsadasd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sgh-oz-2sO" customClass="GRSTextField" customModule="GRSTextField">
-                                <rect key="frame" x="112" y="69" width="97" height="17"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorders" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="maskPattern" value="##"/>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="textInsets">
-                                        <point key="value" x="0.0" y="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kNR-Ig-41H">
+                                <rect key="frame" x="16" y="46" width="288" height="37.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hiD-TU-6qh" customClass="GRSTextField" customModule="GRSTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="17"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorders" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxCharacters">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="de5-D0-gga"/>
+                                            <outlet property="errorLabel" destination="vjy-ls-zI8" id="wac-b1-LEC"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjy-ls-zI8">
+                                        <rect key="frame" x="0.0" y="17" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Sgh-oz-2sO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H3s-2n-Rlj"/>
-                            <constraint firstItem="Sgh-oz-2sO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="Hdn-VI-AQT"/>
-                            <constraint firstItem="Sgh-oz-2sO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="QDr-ii-oNw"/>
+                            <constraint firstItem="kNR-Ig-41H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="pv0-ju-pka"/>
+                            <constraint firstItem="kNR-Ig-41H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qfq-EP-8iW"/>
+                            <constraint firstItem="kNR-Ig-41H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rtQ-8n-PN0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

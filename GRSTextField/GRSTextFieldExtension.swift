@@ -20,9 +20,7 @@ extension GRSTextField: UITextFieldDelegate {
         if let textFieldDidBeginEditing = delegateExtension?.textFieldDidBeginEditing {
             textFieldDidBeginEditing(textField)
         }
-        if let text = textField.text, !text.isEmpty {
-            updateColors()
-        }
+        updateColors()
     }
 
     public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -49,18 +47,20 @@ extension GRSTextField: UITextFieldDelegate {
                        replacementString string: String) {
         if let text = textField.text, let textRange = Range(range, in: text) {
             let newText = text.replacingCharacters(in: textRange, with: string)
-
-            if !maskPattern.isEmpty {
-                textField.text = newText.mask(pattern: maskPattern)
-            } else if maxCharacters > 0 && newText.count <= maxCharacters {
-                textField.text = newText
-            } else {
-                textField.text = newText
-            }
-
+            textField.text = change(text: newText)
             if let text = textField.text {
                 setError(text.isEmpty)
             }
+        }
+    }
+
+    internal func change(text: String) -> String {
+        if !maskPattern.isEmpty {
+            return text.mask(pattern: maskPattern)
+        } else if maxCharacters > 0 {
+            return String(text.prefix(maxCharacters))
+        } else {
+            return text
         }
     }
 
