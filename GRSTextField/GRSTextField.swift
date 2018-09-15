@@ -8,7 +8,8 @@
 
 import UIKit
 
-@objc public enum GRSTextFieldBorderType: Int {
+@objc
+public enum GRSTextFieldBorderType: Int {
     case left = 0
     case right
     case bottom
@@ -17,7 +18,8 @@ import UIKit
 
 @objc @IBDesignable
 public class GRSTextField: UITextField {
-    @objc public var unmasked: String? {
+    @objc
+    public var unmasked: String? {
         return text?.unmask()
     }
 

@@ -1,18 +1,14 @@
-# GRSTextField
+# GRSTextField [![Build Status](https://travis-ci.org/pogramos/GRSTextField.svg?style=flat&branch=master)](https://travis-ci.org/pogramos/GRSTextField) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/cocoapods/v/GRSTextField.svg?style=flat)](http://cocoapods.org/pods/GRSTextField) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://raw.githubusercontent.com/pogramos/GRSTextField/master/LICENSE.md) [![GitHub release](https://img.shields.io/github/release/pogramos/grstextfield.svg?style=flat)](https://github.com/pogramos/grstextfield/releases)
 
-<p align="center">
-  supports
-</p>
-
-## Usage
----
+## Interface Builder
 There are two ways of using the Field, one of them (and most convenient) is to use it with Interface Builder (IB). You can drag a UITextField to the view and then set its class as GRSTextField, after that you'll see a bunch of attributes that you can mess with and preview your changes on the IB.
 
 <p align="center">
   <img src="Screenshots/properties_panel.png" alt="Properties Panel" style="height:350px"/>
 </p>
 
-### Code
+## Code
 
 To set the error label as the outlet of the Field, just drag a label wherever you want on your storyboard (or xib), select your Text Field, go to the connections inspector and link it with the "errorLabel" outlet.
 
