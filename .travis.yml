@@ -10,7 +10,7 @@ env:
 branches:
   only:
     - master
-    - /\d+[\.\da-zA-Z]+[^\.]/
+    - /v\d+[\.\da-zA-Z]+[^\.]/
 cache:
   directories:
   - Carthage
