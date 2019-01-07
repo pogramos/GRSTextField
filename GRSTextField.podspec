@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GRSTextField"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "A customizable UITextField with properties for layout and mask options"
   s.homepage     = "https://github.com/pogramos/GRSTextField"
   s.social_media_url = "http://twitter.com/pogramos"
@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/pogramos/GRSTextField.git", :tag => s.version }
   s.source_files = "GRSTextField/**/*.swift"
   s.requires_arc = true
+  s.swift_version = "4.0"
 end

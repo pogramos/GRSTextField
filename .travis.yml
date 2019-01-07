@@ -1,16 +1,16 @@
 language: objective-c
-osx_image: xcode9.4
-xcode_sdk: iphonesimulator11.4
+osx_image: xcode10.1
+xcode_sdk: iphonesimulator12.1
 xcode_project: GRSTextField.xcodeproj
 xcode_scheme: GRSTextFieldTests
-xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
 env:
   global:
   - FRAMEWORK_NAME="GRSTextField"
 branches:
   only:
     - master
-    - /\d+[\.\da-zA-Z]+[^\.]/
+    - /v\d+[\.\da-zA-Z]+[^\.]/
 cache:
   directories:
   - Carthage

@@ -8,7 +8,6 @@
 
 import UIKit
 
-@objc
 public enum GRSTextFieldBorderType: Int {
     case left = 0
     case right
@@ -16,9 +15,8 @@ public enum GRSTextFieldBorderType: Int {
     case top
 }
 
-@objc @IBDesignable
+@IBDesignable
 public class GRSTextField: UITextField {
-    @objc
     public var unmasked: String? {
         return text?.unmask()
     }
@@ -45,7 +43,7 @@ public class GRSTextField: UITextField {
 
     @IBInspectable public var selectedBorderColor: UIColor? = .blue
 
-    @objc @IBInspectable public var maskPattern: String = String.empty {
+    @IBInspectable public var maskPattern: String = String.empty {
         didSet {
             if maskPattern != String.empty {
                 keyboardType = .numberPad
@@ -53,17 +51,17 @@ public class GRSTextField: UITextField {
         }
     }
 
-    @objc @IBInspectable public var hintMessage: String = String.empty
+    @IBInspectable public var hintMessage: String = String.empty
 
-    @objc @IBInspectable public var errorMessage: String = String.empty
+    @IBInspectable public var errorMessage: String = String.empty
 
-    @objc @IBInspectable public var maxCharacters: Int = 0
+    @IBInspectable public var maxCharacters: Int = 0
 
-    @objc @IBInspectable public var hasBorders: Bool = false
+    @IBInspectable public var hasBorders: Bool = false
 
-    @objc @IBInspectable public var textInsets: CGPoint = .zero
+    @IBInspectable public var textInsets: CGPoint = .zero
 
-    @objc var valid: Bool = true {
+    var valid: Bool = true {
         didSet {
             updateColors()
             errorLabel?.isHidden = hintMessage.isEmpty && valid
@@ -189,7 +187,6 @@ public class GRSTextField: UITextField {
                                   height: rect.size.height))
     }
 
-    @objc
     public func applyMask() {
         guard let text = text else {
             return
@@ -197,7 +194,6 @@ public class GRSTextField: UITextField {
         self.text = change(text: text)
     }
 
-    @objc(setError:)
     public func setError(_ hasError: Bool) {
         if hasError {
             setError(errorMessage)
@@ -206,7 +202,6 @@ public class GRSTextField: UITextField {
         }
     }
 
-    @objc(setErrorWithMessage:)
     public func setError(_ message: String = "") {
         valid = message.isEmpty
         if !valid {

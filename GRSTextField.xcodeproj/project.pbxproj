@@ -7,26 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55043A2821E25EDD0078CAAE /* GRSTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55043A2721E25EDD0078CAAE /* GRSTextField.framework */; };
 		E6EBE9EB2138915200A40C2C /* GRSTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EBE9E12138915200A40C2C /* GRSTextField.framework */; };
 		E6EBE9F22138915200A40C2C /* GRSTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EBE9E42138915200A40C2C /* GRSTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6EBE9FD213891FE00A40C2C /* String+GRSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE9FC213891FE00A40C2C /* String+GRSTextField.swift */; };
 		E6EBEA052138929000A40C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA042138929000A40C2C /* AppDelegate.swift */; };
 		E6EBEA072138929000A40C2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA062138929000A40C2C /* ViewController.swift */; };
 		E6EBEA0A2138929000A40C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EBEA082138929000A40C2C /* Main.storyboard */; };
-		E6EBEA0D2138929000A40C2C /* SampleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA0B2138929000A40C2C /* SampleApp.xcdatamodeld */; };
 		E6EBEA0F2138929100A40C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EBEA0E2138929100A40C2C /* Assets.xcassets */; };
 		E6EBEA122138929100A40C2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EBEA102138929100A40C2C /* LaunchScreen.storyboard */; };
 		E6EBEA382139A61300A40C2C /* GRSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA372139A61300A40C2C /* GRSTextField.swift */; };
 		E6EBEA4F2139B60500A40C2C /* GRSTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA4E2139B60500A40C2C /* GRSTextFieldTests.swift */; };
 		E6EBEA522139BA6900A40C2C /* GRSTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA512139BA6900A40C2C /* GRSTextFieldExtension.swift */; };
-		E6EBEA5C2139DFC100A40C2C /* GRSTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EBE9E12138915200A40C2C /* GRSTextField.framework */; };
-		E6EBEA5D2139DFC100A40C2C /* GRSTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6EBE9E12138915200A40C2C /* GRSTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E6EBEA81213ECFBC00A40C2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA80213ECFBC00A40C2C /* AppDelegate.m */; };
-		E6EBEA84213ECFBC00A40C2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA83213ECFBC00A40C2C /* ViewController.m */; };
-		E6EBEA87213ECFBC00A40C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EBEA85213ECFBC00A40C2C /* Main.storyboard */; };
-		E6EBEA89213ECFBE00A40C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EBEA88213ECFBE00A40C2C /* Assets.xcassets */; };
-		E6EBEA8C213ECFBE00A40C2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EBEA8A213ECFBE00A40C2C /* LaunchScreen.storyboard */; };
-		E6EBEA8F213ECFBE00A40C2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EBEA8E213ECFBE00A40C2C /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,30 +36,10 @@
 			remoteGlobalIDString = E6EBE9E02138915200A40C2C;
 			remoteInfo = GRSTextField;
 		};
-		E6EBEA5E2139DFC100A40C2C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E6EBE9D82138915200A40C2C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E6EBE9E02138915200A40C2C;
-			remoteInfo = GRSTextField;
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		E6EBEA602139DFC100A40C2C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E6EBEA5D2139DFC100A40C2C /* GRSTextField.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		55043A2721E25EDD0078CAAE /* GRSTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRSTextField.framework; path = Carthage/Build/iOS/GRSTextField.framework; sourceTree = "<group>"; };
 		E6EBE9E12138915200A40C2C /* GRSTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRSTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EBE9E42138915200A40C2C /* GRSTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRSTextField.h; sourceTree = "<group>"; };
 		E6EBE9E52138915200A40C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,7 +50,6 @@
 		E6EBEA042138929000A40C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6EBEA062138929000A40C2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E6EBEA092138929000A40C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E6EBEA0C2138929000A40C2C /* SampleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleApp.xcdatamodel; sourceTree = "<group>"; };
 		E6EBEA0E2138929100A40C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6EBEA112138929100A40C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6EBEA132138929100A40C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,16 +57,6 @@
 		E6EBEA372139A61300A40C2C /* GRSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRSTextField.swift; sourceTree = "<group>"; };
 		E6EBEA4E2139B60500A40C2C /* GRSTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRSTextFieldTests.swift; sourceTree = "<group>"; };
 		E6EBEA512139BA6900A40C2C /* GRSTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRSTextFieldExtension.swift; sourceTree = "<group>"; };
-		E6EBEA7D213ECFBB00A40C2C /* ObjcSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6EBEA7F213ECFBC00A40C2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E6EBEA80213ECFBC00A40C2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E6EBEA82213ECFBC00A40C2C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E6EBEA83213ECFBC00A40C2C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E6EBEA86213ECFBC00A40C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E6EBEA88213ECFBE00A40C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E6EBEA8B213ECFBE00A40C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E6EBEA8D213ECFBE00A40C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6EBEA8E213ECFBE00A40C2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,14 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6EBEA5C2139DFC100A40C2C /* GRSTextField.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6EBEA7A213ECFBB00A40C2C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				55043A2821E25EDD0078CAAE /* GRSTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +92,6 @@
 				E6EBE9E32138915200A40C2C /* GRSTextField */,
 				E6EBE9EE2138915200A40C2C /* GRSTextFieldTests */,
 				E6EBEA032138929000A40C2C /* SampleApp */,
-				E6EBEA7E213ECFBC00A40C2C /* ObjcSampleApp */,
 				E6EBE9E22138915200A40C2C /* Products */,
 				E6EBEA552139DFAC00A40C2C /* Frameworks */,
 			);
@@ -150,7 +103,6 @@
 				E6EBE9E12138915200A40C2C /* GRSTextField.framework */,
 				E6EBE9EA2138915200A40C2C /* GRSTextFieldTests.xctest */,
 				E6EBEA022138929000A40C2C /* SampleApp.app */,
-				E6EBEA7D213ECFBB00A40C2C /* ObjcSampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,7 +145,6 @@
 				E6EBEA0E2138929100A40C2C /* Assets.xcassets */,
 				E6EBEA102138929100A40C2C /* LaunchScreen.storyboard */,
 				E6EBEA132138929100A40C2C /* Info.plist */,
-				E6EBEA0B2138929000A40C2C /* SampleApp.xcdatamodeld */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -210,24 +161,9 @@
 		E6EBEA552139DFAC00A40C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55043A2721E25EDD0078CAAE /* GRSTextField.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E6EBEA7E213ECFBC00A40C2C /* ObjcSampleApp */ = {
-			isa = PBXGroup;
-			children = (
-				E6EBEA7F213ECFBC00A40C2C /* AppDelegate.h */,
-				E6EBEA80213ECFBC00A40C2C /* AppDelegate.m */,
-				E6EBEA82213ECFBC00A40C2C /* ViewController.h */,
-				E6EBEA83213ECFBC00A40C2C /* ViewController.m */,
-				E6EBEA85213ECFBC00A40C2C /* Main.storyboard */,
-				E6EBEA88213ECFBE00A40C2C /* Assets.xcassets */,
-				E6EBEA8A213ECFBE00A40C2C /* LaunchScreen.storyboard */,
-				E6EBEA8D213ECFBE00A40C2C /* Info.plist */,
-				E6EBEA8E213ECFBE00A40C2C /* main.m */,
-			);
-			path = ObjcSampleApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,33 +225,15 @@
 				E6EBE9FE2138929000A40C2C /* Sources */,
 				E6EBE9FF2138929000A40C2C /* Frameworks */,
 				E6EBEA002138929000A40C2C /* Resources */,
-				E6EBEA602139DFC100A40C2C /* Embed Frameworks */,
+				55043A2D21E2606E0078CAAE /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E6EBEA5F2139DFC100A40C2C /* PBXTargetDependency */,
 			);
 			name = SampleApp;
 			productName = SampleApp;
 			productReference = E6EBEA022138929000A40C2C /* SampleApp.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E6EBEA7C213ECFBB00A40C2C /* ObjcSampleApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E6EBEA90213ECFBE00A40C2C /* Build configuration list for PBXNativeTarget "ObjcSampleApp" */;
-			buildPhases = (
-				E6EBEA79213ECFBB00A40C2C /* Sources */,
-				E6EBEA7A213ECFBB00A40C2C /* Frameworks */,
-				E6EBEA7B213ECFBB00A40C2C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ObjcSampleApp;
-			productName = ObjcSampleApp;
-			productReference = E6EBEA7D213ECFBB00A40C2C /* ObjcSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -340,9 +258,6 @@
 					E6EBEA012138929000A40C2C = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
-					E6EBEA7C213ECFBB00A40C2C = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 				};
 			};
 			buildConfigurationList = E6EBE9DB2138915200A40C2C /* Build configuration list for PBXProject "GRSTextField" */;
@@ -361,7 +276,6 @@
 				E6EBE9E02138915200A40C2C /* GRSTextField */,
 				E6EBE9E92138915200A40C2C /* GRSTextFieldTests */,
 				E6EBEA012138929000A40C2C /* SampleApp */,
-				E6EBEA7C213ECFBB00A40C2C /* ObjcSampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -391,19 +305,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6EBEA7B213ECFBB00A40C2C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E6EBEA8C213ECFBE00A40C2C /* LaunchScreen.storyboard in Resources */,
-				E6EBEA89213ECFBE00A40C2C /* Assets.xcassets in Resources */,
-				E6EBEA87213ECFBC00A40C2C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		55043A2D21E2606E0078CAAE /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/GRSTextField.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/GRSTextField.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
 		E6EBEA78213EBF7A00A40C2C /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,7 +340,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -443,19 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6EBEA0D2138929000A40C2C /* SampleApp.xcdatamodeld in Sources */,
 				E6EBEA072138929000A40C2C /* ViewController.swift in Sources */,
 				E6EBEA052138929000A40C2C /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6EBEA79213ECFBB00A40C2C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E6EBEA84213ECFBC00A40C2C /* ViewController.m in Sources */,
-				E6EBEA8F213ECFBE00A40C2C /* main.m in Sources */,
-				E6EBEA81213ECFBC00A40C2C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,11 +385,6 @@
 			target = E6EBE9E02138915200A40C2C /* GRSTextField */;
 			targetProxy = E6EBE9EC2138915200A40C2C /* PBXContainerItemProxy */;
 		};
-		E6EBEA5F2139DFC100A40C2C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E6EBE9E02138915200A40C2C /* GRSTextField */;
-			targetProxy = E6EBEA5E2139DFC100A40C2C /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -492,22 +400,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				E6EBEA112138929100A40C2C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		E6EBEA85213ECFBC00A40C2C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6EBEA86213ECFBC00A40C2C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E6EBEA8A213ECFBE00A40C2C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6EBEA8B213ECFBE00A40C2C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -573,6 +465,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -629,6 +522,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -740,6 +634,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5EZY468C5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -759,6 +657,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5EZY468C5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -767,40 +669,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.progeekt.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		E6EBEA91213ECFBE00A40C2C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S5EZY468C5;
-				INFOPLIST_FILE = ObjcSampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.progeekt.ObjcSampleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E6EBEA92213ECFBE00A40C2C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S5EZY468C5;
-				INFOPLIST_FILE = ObjcSampleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.progeekt.ObjcSampleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -844,29 +712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E6EBEA90213ECFBE00A40C2C /* Build configuration list for PBXNativeTarget "ObjcSampleApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E6EBEA91213ECFBE00A40C2C /* Debug */,
-				E6EBEA92213ECFBE00A40C2C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E6EBEA0B2138929000A40C2C /* SampleApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E6EBEA0C2138929000A40C2C /* SampleApp.xcdatamodel */,
-			);
-			currentVersion = E6EBEA0C2138929000A40C2C /* SampleApp.xcdatamodel */;
-			path = SampleApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E6EBE9D82138915200A40C2C /* Project object */;
 }
